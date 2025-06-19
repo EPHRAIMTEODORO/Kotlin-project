@@ -1,0 +1,15 @@
+# Gradle
+.gradle/
+**/build/
+
+# IntelliJ / IDE
+.idea/
+*.iml
+
+# Kotlin/JS/Wasm outputs
+composeApp/build/
+**/dist/
+**/productionExecutable/
+
+# OS files
+.DS_Store

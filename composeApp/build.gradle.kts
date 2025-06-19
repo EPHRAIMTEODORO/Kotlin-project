@@ -1,6 +1,7 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+import org.jetbrains.kotlin.gradle.targets.js.binaryen.BinaryenExec
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -25,6 +26,16 @@ kotlin {
                     }
                 }
             }
+        }
+        tasks.withType<BinaryenExec> {
+            binaryenArgs = mutableListOf(
+                "--enable-gc",
+                "--enable-reference-types",
+                "--enable-exception-handling",
+                "--enable-bulk-memory",
+                "--enable-nontrapping-float-to-int",
+                "-Oz"  // optimize for size (faster) instead of default -O3
+            )
         }
         binaries.executable()
     }

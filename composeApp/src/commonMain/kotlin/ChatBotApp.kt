@@ -35,6 +35,7 @@ fun ChatBotApp() {
         "tell me a fun fact" to "Did you know the very first computer bug was an actual moth stuck in a relay?",
         "how’s the weather" to "I’m a bot—my weather reports are a bit “static.” How’s it look out your window?",
         "what time is it" to "I don’t have wrists, but your device should show the current time!",
+        "is this project worth it" to "yes, it will help you get a job"
 
 
         )

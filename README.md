@@ -6,5 +6,5 @@
 - Clone this repository
 - run this in the terminal `./gradlew wasmJsBrowserDevelopmentRun`
 
-#Live demo
+# Live demo
 `https://chatbot420cs.netlify.app/`
